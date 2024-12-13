@@ -36,7 +36,8 @@ export default function Home() {
         console.log('District:', district); // In ra Quận 12 hoặc kết quả tương ứng
 
         // Nếu bạn muốn lấy phần gần cuối địa chỉ, có thể làm như sau
-        console.log('Region or District (last part):', addressParts[addressParts.length - 2]);
+        console.log('Region or District (last part - 1):', addressParts[addressParts.length - 1]);
+        console.log('Region or District (last part - 2):', addressParts[addressParts.length - 2]);
 
         setAddress(formattedAddress); // Lưu địa chỉ vào state
 
