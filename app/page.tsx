@@ -27,7 +27,10 @@ export default function Home() {
       if (data.results && data.results.length > 0) {
         const formattedAddress = data.results[0].formatted;
         console.log('Address:', formattedAddress);
+        console.log('Address:', formattedAddress[formattedAddress.length - 2]);
+
         setAddress(formattedAddress); // Lưu địa chỉ vào state
+
       } else {
         console.error('Error: No results found');
       }
