@@ -27,7 +27,16 @@ export default function Home() {
       if (data.results && data.results.length > 0) {
         const formattedAddress = data.results[0].formatted;
         console.log('Address:', formattedAddress);
-        console.log('Address:', formattedAddress[formattedAddress.length - 2]);
+
+        // Tách chuỗi địa chỉ thành các phần
+        const addressParts: string[] = formattedAddress.split(',');
+
+        // Tìm phần chứa "Quận" và lấy nó
+        const district = addressParts.find(part => part.includes("Quận"));
+        console.log('District:', district); // In ra Quận 12 hoặc kết quả tương ứng
+
+        // Nếu bạn muốn lấy phần gần cuối địa chỉ, có thể làm như sau
+        console.log('Region or District (last part):', addressParts[addressParts.length - 2]);
 
         setAddress(formattedAddress); // Lưu địa chỉ vào state
 
