@@ -38,6 +38,8 @@ export default function Home() {
         // Nếu bạn muốn lấy phần gần cuối địa chỉ, có thể làm như sau
         console.log('Region or District (last part - 1):', addressParts[addressParts.length - 1]);
         console.log('Region or District (last part - 2):', addressParts[addressParts.length - 2]);
+        console.log('Region or District (last part - 3):', addressParts[addressParts.length - 3]);
+        console.log('Region or District (last part - 4):', addressParts[addressParts.length - 4]);
 
         setAddress(formattedAddress); // Lưu địa chỉ vào state
 
